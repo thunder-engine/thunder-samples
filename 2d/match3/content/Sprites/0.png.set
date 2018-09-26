@@ -1,0 +1,14 @@
+{
+    "crc": -189676917,
+    "guid": "{b86d9248-41fc-47dd-9b1a-d83a1e884b2f}",
+    "settings": {
+        "Filtering": 1,
+        "Format": 2,
+        "MIP_maping": true,
+        "Type": 0,
+        "Wrap": 1
+    },
+    "subitems": [
+    ],
+    "type": 22
+}
