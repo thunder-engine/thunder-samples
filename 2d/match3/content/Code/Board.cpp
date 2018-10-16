@@ -60,7 +60,7 @@ public:
                 bool hole   = false;
                 uint32_t id = rand() % types;
                 if(!hole) {
-                    Actor *cell         = Engine::createActor("", parent);
+                    Actor *cell         = Engine::objectCreate<Actor>("", parent);
                     SpriteMesh *sprite  = cell->addComponent<SpriteMesh>();
                     if(sprite) {
                         sprite->setMaterial(material);
@@ -70,7 +70,7 @@ public:
                     cell->transform()->setScale(Vector3(0.95f, 0.95f, 1.0f));
                 }
 
-                Actor *actor        = Engine::createActor("", parent);
+                Actor *actor        = Engine::objectCreate<Actor>("", parent);
                 Element *element    = actor->addComponent<Element>();
 
                 element->column = x;
@@ -190,7 +190,7 @@ public:
                             y = -1;
                         }
                     } else {
-                        Actor *actor    = Engine::createActor("", parent);
+                        Actor *actor    = Engine::objectCreate<Actor>("", parent);
                         actor->transform()->setPosition(Vector3(x, height + length, 0.0f));
                         length++;
 
