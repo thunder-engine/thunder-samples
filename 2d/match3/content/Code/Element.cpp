@@ -17,7 +17,7 @@ class NEXT_LIBRARY_EXPORT Element : public Component {
 public:
     uint32_t row    = 0;
     uint32_t column = 0;
-    uint32_t id     = 0;
+    int32_t id      = -1;
 
     bool animated   = false;
     bool selected   = false;

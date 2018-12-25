@@ -18,10 +18,10 @@
 #define SCORE(x) x * x * 100
 
 class NEXT_LIBRARY_EXPORT Board : public Component {
-    A_REGISTER(Board, Component, Components);
+    A_REGISTER(Board, Component, Components)
 
-    A_NOPROPERTIES();
-    A_NOMETHODS();
+    A_NOPROPERTIES()
+    A_NOMETHODS()
 
     uint32_t score  = 0;
 
@@ -58,7 +58,7 @@ public:
         for(uint32_t x = 0; x < width; x++) {
             for(uint32_t y = 0; y < height; y++) {
                 bool hole   = false;
-                uint32_t id = rand() % types;
+                int32_t id  = rand() % types;
                 if(!hole) {
                     Actor *cell         = Engine::objectCreate<Actor>("", parent);
                     SpriteMesh *sprite  = cell->addComponent<SpriteMesh>();

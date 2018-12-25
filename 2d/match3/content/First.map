@@ -1,8 +1,8 @@
 [
 	[
-		311056031,
-		-855842097,
 		"Actor",
+		311056031,
+		1998950807,
 		"Chunk",
 		{
 			"Enable": true
@@ -13,9 +13,9 @@
 		}
 	],
 	[
+		"Transform",
 		-1501759770,
 		311056031,
-		"Transform",
 		"",
 		{
 			"Enable": true,
@@ -50,9 +50,9 @@
 		}
 	],
 	[
+		"Actor",
 		-465850389,
 		311056031,
-		"Actor",
 		"Camera",
 		{
 			"Enable": true
@@ -63,9 +63,9 @@
 		}
 	],
 	[
+		"Transform",
 		1271761194,
 		-465850389,
-		"Transform",
 		"",
 		{
 			"Enable": true,
@@ -100,9 +100,9 @@
 		}
 	],
 	[
+		"Camera",
 		1938211806,
 		-465850389,
-		"Camera",
 		"Camera",
 		{
 			"Background_Color": {
@@ -128,9 +128,9 @@
 		}
 	],
 	[
+		"Pipeline",
 		1706069751,
 		1938211806,
-		"Pipeline",
 		"",
 		{
 		},
@@ -140,9 +140,9 @@
 		}
 	],
 	[
+		"Actor",
 		185254543,
 		311056031,
-		"Actor",
 		"Background",
 		{
 			"Enable": true
@@ -153,9 +153,9 @@
 		}
 	],
 	[
+		"Transform",
 		-1547056000,
 		185254543,
-		"Transform",
 		"",
 		{
 			"Enable": true,
@@ -190,9 +190,9 @@
 		}
 	],
 	[
+		"SpriteMesh",
 		400396451,
 		185254543,
-		"SpriteMesh",
 		"SpriteMesh",
 		{
 			"Enable": true
@@ -205,9 +205,9 @@
 		}
 	],
 	[
+		"Actor",
 		-156249552,
 		311056031,
-		"Actor",
 		"TextMesh",
 		{
 			"Enable": true
@@ -218,9 +218,9 @@
 		}
 	],
 	[
+		"Transform",
 		2138576584,
 		-156249552,
-		"Transform",
 		"",
 		{
 			"Enable": true,
@@ -255,9 +255,9 @@
 		}
 	],
 	[
+		"TextMesh",
 		547449796,
 		-156249552,
-		"TextMesh",
 		"TextMesh",
 		{
 			"Color": {
@@ -280,9 +280,9 @@
 		}
 	],
 	[
+		"Actor",
 		241387472,
 		311056031,
-		"Actor",
 		"Board",
 		{
 			"Enable": true
@@ -293,9 +293,9 @@
 		}
 	],
 	[
+		"Transform",
 		1306411016,
 		241387472,
-		"Transform",
 		"",
 		{
 			"Enable": true,
@@ -330,9 +330,9 @@
 		}
 	],
 	[
+		"Board",
 		-34503376,
 		241387472,
-		"Board",
 		"Board",
 		{
 			"Enable": true
