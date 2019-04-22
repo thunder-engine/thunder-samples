@@ -96,8 +96,8 @@ public:
         }
 
         if(!animation) {
-            if(Input::instance()->mouseButtons() & Input::LEFT) {
-                Vector4 pos = Input::instance()->mousePosition();
+            if(Input::mouseButtons() & Input::LEFT) {
+                Vector4 pos = Input::mousePosition();
                 Camera *camera  = Camera::current();
                 if(camera) {
                     Ray ray = camera->castRay(pos.z, pos.w);
