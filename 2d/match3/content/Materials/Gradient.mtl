@@ -1,0 +1,96 @@
+{
+    "Blend": 0,
+    "Depth": true,
+    "Links": [
+        {
+            "IPort": 0,
+            "OPort": 0,
+            "Receiver": 3,
+            "Sender": 2
+        },
+        {
+            "IPort": 2,
+            "OPort": 1,
+            "Receiver": 1,
+            "Sender": 3
+        },
+        {
+            "IPort": 1,
+            "OPort": 0,
+            "Receiver": 1,
+            "Sender": 5
+        },
+        {
+            "IPort": 0,
+            "OPort": 0,
+            "Receiver": 1,
+            "Sender": 4
+        },
+        {
+            "IPort": 1,
+            "OPort": 3,
+            "Receiver": 0,
+            "Sender": 1
+        }
+    ],
+    "Model": 0,
+    "Nodes": [
+        {
+            "Type": "Mix",
+            "Values": {
+            },
+            "X": -140,
+            "Y": 80
+        },
+        {
+            "Type": "TexCoord",
+            "Values": {
+            },
+            "X": -460,
+            "Y": 160
+        },
+        {
+            "Type": "Mask",
+            "Values": {
+                "A": false,
+                "B": false,
+                "G": true,
+                "R": false
+            },
+            "X": -300,
+            "Y": 240
+        },
+        {
+            "Type": "ConstVector3",
+            "Values": {
+                "Value": [
+                    67,
+                    174,
+                    121,
+                    163,
+                    255
+                ]
+            },
+            "X": -460,
+            "Y": -40
+        },
+        {
+            "Type": "ConstVector3",
+            "Values": {
+                "Value": [
+                    67,
+                    86,
+                    77,
+                    144,
+                    255
+                ]
+            },
+            "X": -460,
+            "Y": 60
+        }
+    ],
+    "Raw": "",
+    "Side": true,
+    "Type": 0,
+    "View": true
+}

@@ -17,8 +17,8 @@
 
 #define SCORE(x) x * x * 100
 
-class NEXT_LIBRARY_EXPORT Board : public Component {
-    A_REGISTER(Board, Component, Components)
+class Board : public NativeBehaviour {
+    A_REGISTER(Board, NativeBehaviour, Components)
 
     A_NOPROPERTIES()
     A_NOMETHODS()
@@ -40,7 +40,7 @@ class NEXT_LIBRARY_EXPORT Board : public Component {
 
 public:
     void start() {
-        textMesh    = actor().parent()->findChild<TextMesh *>();
+        textMesh    = actor()->parent()->findChild<TextMesh *>();
 
         grid.resize(width);
         for(uint32_t x = 0; x < width; x++) {
@@ -53,7 +53,7 @@ public:
         Material *material  = Engine::loadResource<Material>(".embedded/DefaultSprite.mtl");
         Texture *texture    = Engine::loadResource<Texture>("Sprites/Cell.png");
 
-        Actor *parent   = &actor();
+        Actor *parent   = actor();
         // Fill grid
         for(uint32_t x = 0; x < width; x++) {
             for(uint32_t y = 0; y < height; y++) {
@@ -104,18 +104,18 @@ public:
                     for(uint32_t x = 0; x < width; x++) {
                         for(uint32_t y = 0; y < height; y++) {
                             if(grid[x][y] != nullptr) {
-                                Transform *t    = grid[x][y]->actor().transform();
+                                Transform *t = grid[x][y]->actor()->transform();
                                 if(ray.intersect(t->worldPosition(), 0.5f, nullptr)) {
                                     if(selected && selected != grid[x][y] &&
                                        Vector2((float)x - selected->column, (float)y - selected->row).length() == 1.0f) {
                                         swapElements(x, y);
-                                        move    = true;
+                                        move = true;
                                         return;
                                     } else {
                                         if(selected) {
                                             selected->setSelected(false);
                                         }
-                                        selected    = grid[x][y];
+                                        selected = grid[x][y];
                                         selected->setSelected(true);
                                     }
                                     break;
@@ -125,6 +125,7 @@ public:
                     }
                 }
             }
+
             if(move) {
                 move    = false;
                 if(!findMatches()) {
@@ -174,7 +175,7 @@ public:
     }
 
     void refillGrid() {
-        Actor *parent   = &actor();
+        Actor *parent = actor();
         for(uint32_t x = 0; x < width; x++) {
             uint8_t length  = 0;
             for(int32_t y = 0; y < height; y++) {
@@ -224,7 +225,7 @@ public:
                         }
                         selected    = nullptr;
                         target      = nullptr;
-                        delete &(element->actor());
+                        delete element->actor();
                         grid[x][i]  = nullptr;
                         result      = true;
                     }
@@ -247,7 +248,7 @@ public:
                         }
                         selected    = nullptr;
                         target      = nullptr;
-                        delete &(element->actor());
+                        delete element->actor();
                         grid[i][y]  = nullptr;
                         result      = true;
                     }
