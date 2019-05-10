@@ -2,7 +2,7 @@
 	[
 		"Actor",
 		311056031,
-		683557840,
+		-1254021028,
 		"Chunk",
 		{
 			"Enable": true
@@ -72,7 +72,7 @@
 			"Position": {
 				"Vector3":
 				[
-					3.000000,
+					2.500000,
 					4.000000,
 					10.000000
 				]
@@ -120,7 +120,7 @@
 			"Fov": 60.000000,
 			"Near": 0.100000,
 			"Orthographic": true,
-			"Size": 11.000000
+			"Size": 12.000000
 		},
 		[
 		],
@@ -162,7 +162,7 @@
 			"Position": {
 				"Vector3":
 				[
-					3.000000,
+					2.500000,
 					4.000000,
 					-10.000000
 				]
@@ -190,10 +190,10 @@
 		}
 	],
 	[
-		"StaticMesh",
+		"MeshRender",
 		-1312912675,
 		185254543,
-		"StaticMesh",
+		"MeshRender",
 		{
 			"Enable": true
 		},
@@ -210,7 +210,7 @@
 		"Actor",
 		-156249552,
 		311056031,
-		"TextMesh",
+		"TextRender",
 		{
 			"Enable": true
 		},
@@ -245,9 +245,9 @@
 			"Scale": {
 				"Vector3":
 				[
-					0.020000,
-					0.020000,
-					0.020000
+					0.010000,
+					0.010000,
+					0.010000
 				]
 			}
 		},
@@ -257,10 +257,10 @@
 		}
 	],
 	[
-		"TextMesh",
+		"TextRender",
 		547449796,
 		-156249552,
-		"TextMesh",
+		"TextRender",
 		{
 			"Color": {
 				"Vector4":
@@ -272,8 +272,9 @@
 				]
 			},
 			"Enable": true,
-			"Font_Size": 32,
-			"Text": "0"
+			"Font_Size": 64,
+			"Text": "0",
+			"Use_Kerning": true
 		},
 		[
 		],
@@ -368,7 +369,7 @@
 				"Vector3":
 				[
 					0.000000,
-					-1.575000,
+					-2.054950,
 					-9.000000
 				]
 			},
@@ -395,10 +396,10 @@
 		}
 	],
 	[
-		"StaticMesh",
+		"MeshRender",
 		-324356775,
 		-1993958636,
-		"StaticMesh",
+		"MeshRender",
 		{
 			"Enable": true
 		},
@@ -435,7 +436,7 @@
 				"Vector3":
 				[
 					-2.985837,
-					-1.901317,
+					-2.381415,
 					-9.000000
 				]
 			},
@@ -462,10 +463,10 @@
 		}
 	],
 	[
-		"StaticMesh",
+		"MeshRender",
 		-2050701106,
 		-2121263758,
-		"StaticMesh",
+		"MeshRender",
 		{
 			"Enable": true
 		},
@@ -529,10 +530,10 @@
 		}
 	],
 	[
-		"StaticMesh",
+		"MeshRender",
 		-632064329,
 		-424943393,
-		"StaticMesh",
+		"MeshRender",
 		{
 			"Enable": true
 		},
@@ -596,10 +597,10 @@
 		}
 	],
 	[
-		"StaticMesh",
+		"MeshRender",
 		1979109479,
 		67652357,
-		"StaticMesh",
+		"MeshRender",
 		{
 			"Enable": true
 		},

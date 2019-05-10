@@ -3,7 +3,7 @@
 
 #include <component.h>
 
-#include <spritemesh.h>
+#include <spriterender.h>
 #include <texture.h>
 #include <actor.h>
 #include <transform.h>
@@ -33,10 +33,10 @@ public:
         }
 
         if(id != -1) {
-            SpriteMesh *sprite  = actor()->addComponent<SpriteMesh>();
+            SpriteRender *sprite  = actor()->addComponent<SpriteRender>();
             if(sprite) {
                 string name = string("Sprites/") + to_string(id) + ".png";
-                Texture *texture    = Engine::loadResource<Texture>(name);
+                Texture *texture = Engine::loadResource<Texture>(name);
 
                 sprite->setMaterial(material);
                 sprite->setTexture(texture);

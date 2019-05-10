@@ -9,7 +9,7 @@
 #include <timer.h>
 
 #include <camera.h>
-#include <textmesh.h>
+#include <textrender.h>
 
 #include <vector>
 
@@ -34,13 +34,13 @@ class Board : public NativeBehaviour {
     Element *selected   = nullptr;
     Element *target     = nullptr;
 
-    TextMesh *textMesh  = nullptr;
+    TextRender *textRender  = nullptr;
 
     vector<vector<Element *>>   grid;
 
 public:
     void start() {
-        textMesh    = actor()->parent()->findChild<TextMesh *>();
+        textRender    = actor()->parent()->findChild<TextRender *>();
 
         grid.resize(width);
         for(uint32_t x = 0; x < width; x++) {
@@ -60,8 +60,8 @@ public:
                 bool hole   = false;
                 int32_t id  = rand() % types;
                 if(!hole) {
-                    Actor *cell         = Engine::objectCreate<Actor>("", parent);
-                    SpriteMesh *sprite  = cell->addComponent<SpriteMesh>();
+                    Actor *cell = Engine::objectCreate<Actor>("", parent);
+                    SpriteRender *sprite = cell->addComponent<SpriteRender>();
                     if(sprite) {
                         sprite->setMaterial(material);
                         sprite->setTexture(texture);
@@ -70,12 +70,12 @@ public:
                     cell->transform()->setScale(Vector3(0.95f, 0.95f, 1.0f));
                 }
 
-                Actor *actor        = Engine::objectCreate<Actor>("", parent);
-                Element *element    = actor->addComponent<Element>();
+                Actor *actor = Engine::objectCreate<Actor>("", parent);
+                Element *element = actor->addComponent<Element>();
 
                 element->column = x;
-                element->row    = y;
-                element->id     = (hole) ? -1 : id;
+                element->row = y;
+                element->id = (hole) ? -1 : id;
 
                 actor->transform()->setPosition(Vector3(x, y, 0.0f));
 
@@ -96,8 +96,12 @@ public:
         }
 
         if(!animation) {
-            if(Input::mouseButtons() & Input::LEFT) {
+            if(Input::mouseButtons() & Input::LEFT ||
+               Input::touchCount() > 0) {
                 Vector4 pos = Input::mousePosition();
+                if(Input::touchCount() > 0) {
+                    pos = Input::touchPosition(0);
+                }
                 Camera *camera  = Camera::current();
                 if(camera) {
                     Ray ray = camera->castRay(pos.z, pos.w);
@@ -178,7 +182,7 @@ public:
         Actor *parent = actor();
         for(uint32_t x = 0; x < width; x++) {
             uint8_t length  = 0;
-            for(int32_t y = 0; y < height; y++) {
+            for(uint32_t y = 0; y < height; y++) {
                 if(grid[x][y] == nullptr) {
                     if(y < height - 1) {
                         Element *element    = findNext(x, y + 1);
@@ -214,8 +218,8 @@ public:
             uint32_t from, matched;
             if(checkColumn(x, 0, from, matched)) {
                 score   += SCORE(matched);
-                if(textMesh) {
-                    textMesh->setText(to_string(score));
+                if(textRender) {
+                    textRender->setText(to_string(score));
                 }
                 for(uint32_t i = from; i < (from + matched); i++) {
                     Element *element    = grid[x][i];
@@ -237,8 +241,8 @@ public:
             uint32_t from, matched;
             if(checkRow(0, y, from, matched)) {
                 score   += SCORE(matched);
-                if(textMesh) {
-                    textMesh->setText(to_string(score));
+                if(textRender) {
+                    textRender->setText(to_string(score));
                 }
                 for(uint32_t i = from; i < (from + matched); i++) {
                     Element *element    = grid[i][y];
@@ -261,10 +265,10 @@ public:
     bool checkColumn(uint8_t x, uint8_t y, uint32_t &from, uint32_t &matched) {
         from    = y;
         matched = 0;
-        uint32_t current    = 0;
+        int32_t current = 0;
         for(uint32_t i = y; i < height; i++) {
             if(grid[x][i] != nullptr) {
-                uint32_t id = grid[x][i]->id;
+                int32_t id = grid[x][i]->id;
                 if(id == current && id != -1) {
                     matched++;
                 } else {
@@ -286,10 +290,10 @@ public:
     bool checkRow(uint8_t x, uint8_t y, uint32_t &from, uint32_t &matched) {
         from    = x;
         matched = 0;
-        uint32_t current    = 0;
+        int32_t current    = 0;
         for(uint32_t i = x; i < width; i++) {
             if(grid[i][y] != nullptr) {
-                uint32_t id = grid[i][y]->id;
+                int32_t id = grid[i][y]->id;
                 if(id == current && id != -1) {
                     matched++;
                 } else {
