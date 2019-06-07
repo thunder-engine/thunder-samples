@@ -2,7 +2,7 @@
 	[
 		"Actor",
 		311056031,
-		-1254021028,
+		852288601,
 		"Chunk",
 		{
 			"Enable": true
@@ -272,7 +272,7 @@
 				]
 			},
 			"Enable": true,
-			"Font_Size": 64,
+			"Font_Size": 2,
 			"Text": "0",
 			"Use_Kerning": true
 		},

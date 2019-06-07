@@ -215,60 +215,33 @@ public:
         bool result = false;
         // Check columns
         for(uint32_t x = 0; x < width; x++) {
-            uint32_t from, matched;
-            if(checkColumn(x, 0, from, matched)) {
-                score   += SCORE(matched);
-                if(textRender) {
-                    textRender->setText(to_string(score));
-                }
-                for(uint32_t i = from; i < (from + matched); i++) {
-                    Element *element    = grid[x][i];
-                    if(element) {
-                        if(selected) {
-                            selected->setSelected(false);
-                        }
-                        selected    = nullptr;
-                        target      = nullptr;
-                        delete element->actor();
-                        grid[x][i]  = nullptr;
-                        result      = true;
-                    }
-                }
+            uint8_t from = 0;
+            uint8_t matched = 0;
+            if(checkLine(x, from, matched, true)) {
+                deleteElements(x, from, matched, true);
+                result = true;
             }
         }
         // Check rows
         for(uint32_t y = 0; y < height; y++) {
-            uint32_t from, matched;
-            if(checkRow(0, y, from, matched)) {
-                score   += SCORE(matched);
-                if(textRender) {
-                    textRender->setText(to_string(score));
-                }
-                for(uint32_t i = from; i < (from + matched); i++) {
-                    Element *element    = grid[i][y];
-                    if(element) {
-                        if(selected) {
-                            selected->setSelected(false);
-                        }
-                        selected    = nullptr;
-                        target      = nullptr;
-                        delete element->actor();
-                        grid[i][y]  = nullptr;
-                        result      = true;
-                    }
-                }
+            uint8_t from = 0;
+            uint8_t matched = 0;
+            if(checkLine(y, from, matched, false)) {
+                deleteElements(y, from, matched, false);
+                result = true;
             }
         }
         return result;
     }
 
-    bool checkColumn(uint8_t x, uint8_t y, uint32_t &from, uint32_t &matched) {
-        from    = y;
-        matched = 0;
+    bool checkLine(uint8_t pos, uint8_t &from, uint8_t &matched, bool vertical) {
         int32_t current = 0;
-        for(uint32_t i = y; i < height; i++) {
-            if(grid[x][i] != nullptr) {
-                int32_t id = grid[x][i]->id;
+        uint8_t size = (vertical) ? height : width;
+        for(uint32_t i = 0; i < size; i++) {
+            uint8_t x = (vertical) ? pos : i;
+            uint8_t y = (vertical) ? i : pos;
+            if(grid[x][y] != nullptr) {
+                int32_t id = grid[x][y]->id;
                 if(id == current && id != -1) {
                     matched++;
                 } else {
@@ -287,29 +260,26 @@ public:
         return (matched > 2);
     }
 
-    bool checkRow(uint8_t x, uint8_t y, uint32_t &from, uint32_t &matched) {
-        from    = x;
-        matched = 0;
-        int32_t current    = 0;
-        for(uint32_t i = x; i < width; i++) {
-            if(grid[i][y] != nullptr) {
-                int32_t id = grid[i][y]->id;
-                if(id == current && id != -1) {
-                    matched++;
-                } else {
-                    if(matched < 3) {
-                        matched = 1;
-                        from    = i;
-                        current = id;
-                    } else {
-                        return true;
-                    }
-                }
-            } else {
-                matched = 0;
+    void deleteElements(uint8_t pos, uint8_t from, uint8_t size, bool vertical) {
+        score   += SCORE(size);
+        if(textRender) {
+            textRender->setText(to_string(score));
+        }
+        if(selected) {
+            selected->setSelected(false);
+        }
+        selected    = nullptr;
+        target      = nullptr;
+
+        for(uint32_t i = from; i < (from + size); i++) {
+            uint8_t x = (vertical) ? pos : i;
+            uint8_t y = (vertical) ? i : pos;
+            Element *element    = grid[x][y];
+            if(element) {
+                delete element->actor();
+                grid[x][y]  = nullptr;
             }
         }
-        return (matched > 2);
     }
 };
 
