@@ -5,6 +5,7 @@
 
 #include <spriterender.h>
 #include <texture.h>
+#include <material.h>
 #include <actor.h>
 #include <transform.h>
 #include <timer.h>

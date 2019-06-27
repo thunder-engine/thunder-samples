@@ -2,10 +2,10 @@
 	[
 		"Actor",
 		311056031,
-		852288601,
+		146954272,
 		"Chunk",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -18,7 +18,7 @@
 		311056031,
 		"",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -55,7 +55,7 @@
 		311056031,
 		"Camera",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -68,7 +68,7 @@
 		-465850389,
 		"",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -114,7 +114,7 @@
 					1.000000
 				]
 			},
-			"Enable": true,
+			"Enabled": true,
 			"Far": 100.000000,
 			"Focal_Distance": 1.000000,
 			"Fov": 60.000000,
@@ -145,7 +145,7 @@
 		311056031,
 		"Background",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -158,7 +158,7 @@
 		185254543,
 		"",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -195,15 +195,13 @@
 		185254543,
 		"MeshRender",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
 		{
-			"Materials": [
-				"{24bc1058-6e1e-4991-b885-80e7c90e3aec}"
-			],
-			"Mesh": "{00000000-0501-0000-0000-000000000000}"
+			"Material": "{24bc1058-6e1e-4991-b885-80e7c90e3aec}",
+			"Mesh": "{e394db15-d7a2-481c-8926-eb3bbcf0d21a}"
 		}
 	],
 	[
@@ -212,7 +210,7 @@
 		311056031,
 		"TextRender",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -225,12 +223,12 @@
 		-156249552,
 		"",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
-					-0.250000,
-					8.500000,
+					-0.500000,
+					9.000000,
 					0.000000
 				]
 			},
@@ -245,9 +243,9 @@
 			"Scale": {
 				"Vector3":
 				[
-					0.010000,
-					0.010000,
-					0.010000
+					0.020000,
+					0.020000,
+					0.020000
 				]
 			}
 		},
@@ -262,6 +260,13 @@
 		-156249552,
 		"TextRender",
 		{
+			"Boundaries": {
+				"Vector2":
+				[
+					0.000000,
+					0.000000
+				]
+			},
 			"Color": {
 				"Vector4":
 				[
@@ -271,15 +276,17 @@
 					1.000000
 				]
 			},
-			"Enable": true,
-			"Font_Size": 2,
+			"Enabled": true,
+			"Font_Size": 64,
 			"Text": "0",
-			"Use_Kerning": true
+			"Use_Kerning": true,
+			"Word_Wrap": false
 		},
 		[
 		],
 		{
-			"Font": "{46969c2d-ee21-499b-b707-806af0d55cf1}"
+			"Font": "{46969c2d-ee21-499b-b707-806af0d55cf1}",
+			"Material": "{00000000-0403-0000-0000-000000000000}"
 		}
 	],
 	[
@@ -288,7 +295,7 @@
 		311056031,
 		"Board",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -301,7 +308,7 @@
 		241387472,
 		"",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -338,7 +345,7 @@
 		241387472,
 		"Board",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -351,7 +358,7 @@
 		311056031,
 		"Mount",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -364,7 +371,7 @@
 		-1993958636,
 		"Transform",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -401,15 +408,13 @@
 		-1993958636,
 		"MeshRender",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
 		{
-			"Materials": [
-				"{24bc1058-6e1e-4991-b885-80e7c90e3aec}"
-			],
-			"Mesh": "{00000000-0501-0000-0000-000000000000}"
+			"Material": "{24bc1058-6e1e-4991-b885-80e7c90e3aec}",
+			"Mesh": "{e394db15-d7a2-481c-8926-eb3bbcf0d21a}"
 		}
 	],
 	[
@@ -418,7 +423,7 @@
 		311056031,
 		"Mount2",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -431,7 +436,7 @@
 		-2121263758,
 		"Transform",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -468,15 +473,13 @@
 		-2121263758,
 		"MeshRender",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
 		{
-			"Materials": [
-				"{24bc1058-6e1e-4991-b885-80e7c90e3aec}"
-			],
-			"Mesh": "{00000000-0501-0000-0000-000000000000}"
+			"Material": "{24bc1058-6e1e-4991-b885-80e7c90e3aec}",
+			"Mesh": "{e394db15-d7a2-481c-8926-eb3bbcf0d21a}"
 		}
 	],
 	[
@@ -485,7 +488,7 @@
 		311056031,
 		"Mount3",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -498,7 +501,7 @@
 		-424943393,
 		"Transform",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -535,15 +538,13 @@
 		-424943393,
 		"MeshRender",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
 		{
-			"Materials": [
-				"{24bc1058-6e1e-4991-b885-80e7c90e3aec}"
-			],
-			"Mesh": "{00000000-0501-0000-0000-000000000000}"
+			"Material": "{24bc1058-6e1e-4991-b885-80e7c90e3aec}",
+			"Mesh": "{e394db15-d7a2-481c-8926-eb3bbcf0d21a}"
 		}
 	],
 	[
@@ -552,7 +553,7 @@
 		311056031,
 		"Mount4",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -565,7 +566,7 @@
 		67652357,
 		"Transform",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -602,15 +603,13 @@
 		67652357,
 		"MeshRender",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
 		{
-			"Materials": [
-				"{24bc1058-6e1e-4991-b885-80e7c90e3aec}"
-			],
-			"Mesh": "{00000000-0501-0000-0000-000000000000}"
+			"Material": "{24bc1058-6e1e-4991-b885-80e7c90e3aec}",
+			"Mesh": "{e394db15-d7a2-481c-8926-eb3bbcf0d21a}"
 		}
 	]
 ]
