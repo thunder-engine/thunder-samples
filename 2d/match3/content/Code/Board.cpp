@@ -276,7 +276,7 @@ public:
             uint8_t y = (vertical) ? i : pos;
             Element *element    = grid[x][y];
             if(element) {
-                delete element->actor();
+                element->actor()->deleteLater();
                 grid[x][y]  = nullptr;
             }
         }
