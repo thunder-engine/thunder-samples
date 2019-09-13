@@ -30,14 +30,14 @@ public:
 
     void start() {
         if(material == nullptr) {
-            material    = Engine::loadResource<Material>(".embedded/DefaultSprite.mtl");
+            material = dynamic_cast<Material *>(Engine::loadResource(".embedded/DefaultSprite.mtl"));
         }
 
         if(id != -1) {
-            SpriteRender *sprite  = actor()->addComponent<SpriteRender>();
+            SpriteRender *sprite = dynamic_cast<SpriteRender *>(actor()->addComponent("SpriteRender"));
             if(sprite) {
                 string name = string("Sprites/") + to_string(id) + ".png";
-                Texture *texture = Engine::loadResource<Texture>(name);
+                Texture *texture = dynamic_cast<Texture *>(Engine::loadResource(name));
 
                 sprite->setMaterial(material);
                 sprite->setTexture(texture);

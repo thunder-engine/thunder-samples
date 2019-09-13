@@ -40,7 +40,7 @@ class Board : public NativeBehaviour {
 
 public:
     void start() {
-        textRender    = actor()->parent()->findChild<TextRender *>();
+        textRender = dynamic_cast<TextRender *>(static_cast<Actor *>(actor()->parent())->component("TextRender"));
 
         grid.resize(width);
         for(uint32_t x = 0; x < width; x++) {
@@ -50,8 +50,8 @@ public:
             }
         }
 
-        Material *material  = Engine::loadResource<Material>(".embedded/DefaultSprite.mtl");
-        Texture *texture    = Engine::loadResource<Texture>("Sprites/Cell.png");
+        Material *material  = dynamic_cast<Material *>(Engine::loadResource(".embedded/DefaultSprite.mtl"));
+        Texture *texture    = dynamic_cast<Texture *>(Engine::loadResource("Sprites/Cell.png"));
 
         Actor *parent   = actor();
         // Fill grid
@@ -61,7 +61,7 @@ public:
                 int32_t id  = rand() % types;
                 if(!hole) {
                     Actor *cell = Engine::objectCreate<Actor>("", parent);
-                    SpriteRender *sprite = cell->addComponent<SpriteRender>();
+                    SpriteRender *sprite = dynamic_cast<SpriteRender *>(cell->addComponent("SpriteRender"));
                     if(sprite) {
                         sprite->setMaterial(material);
                         sprite->setTexture(texture);
@@ -71,7 +71,7 @@ public:
                 }
 
                 Actor *actor = Engine::objectCreate<Actor>("", parent);
-                Element *element = actor->addComponent<Element>();
+                Element *element = dynamic_cast<Element *>(actor->addComponent("Element"));
 
                 element->column = x;
                 element->row = y;
@@ -199,7 +199,7 @@ public:
                         actor->transform()->setPosition(Vector3(x, height + length, 0.0f));
                         length++;
 
-                        Element *element= actor->addComponent<Element>();
+                        Element *element= dynamic_cast<Element *>(actor->addComponent("Element"));
                         element->setTarget(x, y);
                         element->id     = rand() % types;
 
