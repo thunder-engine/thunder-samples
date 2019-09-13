@@ -2,10 +2,10 @@
 	[
 		"Actor",
 		-1131072845,
-		1619358894,
+		-1152166406,
 		"Chunk",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -18,7 +18,7 @@
 		-1131072845,
 		"Transform",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -55,7 +55,7 @@
 		-1131072845,
 		"AngelBehaviour",
 		{
-			"Enable": true
+			"Enabled": true
 		},
 		[
 		],
@@ -68,7 +68,7 @@
 		-1515142275,
 		"Transform",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Position": {
 				"Vector3":
 				[
@@ -105,12 +105,15 @@
 		-1515142275,
 		"AngelBehaviour",
 		{
-			"Enable": true,
+			"Enabled": true,
 			"Script": "Board"
 		},
 		[
 		],
 		{
+			"back": "{94e53999-5fbb-4274-8d66-760ff77c3fe5}",
+			"height": 4,
+			"width": 4
 		}
 	]
 ]
