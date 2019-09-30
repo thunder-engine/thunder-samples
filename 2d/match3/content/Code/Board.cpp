@@ -96,7 +96,7 @@ public:
         }
 
         if(!animation) {
-            if(Input::mouseButtons() & Input::LEFT ||
+            if(Input::isMouseButton(Input::LEFT) ||
                Input::touchCount() > 0) {
                 Vector4 pos = Input::mousePosition();
                 if(Input::touchCount() > 0) {
