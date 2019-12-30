@@ -2,7 +2,7 @@
 	[
 		"Actor",
 		311056031,
-		146954272,
+		-1850736014,
 		"Chunk",
 		{
 			"Enabled": true
@@ -260,6 +260,7 @@
 		-156249552,
 		"TextRender",
 		{
+			"Alignment": 0,
 			"Boundaries": {
 				"Vector2":
 				[
