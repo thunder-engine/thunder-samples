@@ -40,7 +40,8 @@ class Board : public NativeBehaviour {
 
 public:
     void start() {
-        textRender = dynamic_cast<TextRender *>(static_cast<Actor *>(actor()->parent())->component("TextRender"));
+        Actor *p = static_cast<Actor *>(actor()->parent());
+        textRender = dynamic_cast<TextRender *>(p->componentInChild("TextRender"));
 
         grid.resize(width);
         for(uint32_t x = 0; x < width; x++) {

@@ -139,8 +139,7 @@ class Board : Behaviour {
             int x = freeCol[pos];
             int y = freeRow[pos];
             
-            Actor @object = cast<Actor>(ElementPrefab.clone());
-            object.Parent = Parent;
+            Actor @object = cast<Actor>(ElementPrefab.clone(Parent));
             object.Name = "Element";
             
             Element @element = cast<Element>(getObject(cast<AngelBehaviour>(object.component("AngelBehaviour"))));
