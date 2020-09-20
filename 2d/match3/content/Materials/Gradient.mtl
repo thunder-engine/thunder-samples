@@ -9,12 +9,6 @@
             "Sender": 2
         },
         {
-            "IPort": 2,
-            "OPort": 1,
-            "Receiver": 1,
-            "Sender": 3
-        },
-        {
             "IPort": 1,
             "OPort": 0,
             "Receiver": 1,
@@ -31,6 +25,12 @@
             "OPort": 3,
             "Receiver": 0,
             "Sender": 1
+        },
+        {
+            "IPort": 2,
+            "OPort": 1,
+            "Receiver": 1,
+            "Sender": 3
         }
     ],
     "Model": 0,
@@ -39,15 +39,15 @@
             "Type": "Mix",
             "Values": {
             },
-            "X": -140,
-            "Y": 80
+            "X": -192,
+            "Y": 32
         },
         {
             "Type": "TexCoord",
             "Values": {
             },
-            "X": -460,
-            "Y": 160
+            "X": -576,
+            "Y": 164
         },
         {
             "Type": "Mask",
@@ -57,8 +57,8 @@
                 "G": true,
                 "R": false
             },
-            "X": -300,
-            "Y": 240
+            "X": -384,
+            "Y": 144
         },
         {
             "Type": "ConstVector3",
@@ -71,8 +71,8 @@
                     255
                 ]
             },
-            "X": -460,
-            "Y": -40
+            "X": -576,
+            "Y": -36
         },
         {
             "Type": "ConstVector3",
@@ -85,8 +85,8 @@
                     255
                 ]
             },
-            "X": -460,
-            "Y": 60
+            "X": -576,
+            "Y": 64
         }
     ],
     "Raw": "",

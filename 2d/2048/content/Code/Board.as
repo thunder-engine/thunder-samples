@@ -1,7 +1,7 @@
 class Board : Behaviour {
     int Size = 4;
 
-    Actor@ ElementPrefab = null;
+    Prefab@ ElementPrefab = null;
 
     private grid<Element @> Grid;
     private Actor @Parent = null;
@@ -56,16 +56,16 @@ class Board : Behaviour {
     }
 
     void update() override {
-        if(Input::isKeyDown(263)) {
+        if(Input::isKeyDown(Input::KeyCode::KEY_LEFT)) {
             moveTiles(Vector2(-1, 0));
         }
-        if(Input::isKeyDown(262)) {
+        if(Input::isKeyDown(Input::KeyCode::KEY_RIGHT)) {
             moveTiles(Vector2( 1, 0));
         }
-        if(Input::isKeyDown(264)) {
+        if(Input::isKeyDown(Input::KeyCode::KEY_DOWN)) {
             moveTiles(Vector2( 0,-1));
         }
-        if(Input::isKeyDown(265)) {
+        if(Input::isKeyDown(Input::KeyCode::KEY_UP)) {
             moveTiles(Vector2( 0, 1));
         }
     }
@@ -139,7 +139,7 @@ class Board : Behaviour {
             int x = freeCol[pos];
             int y = freeRow[pos];
             
-            Actor @object = cast<Actor>(ElementPrefab.clone(Parent));
+            Actor @object = cast<Actor>(ElementPrefab.Actor.clone(Parent));
             object.Name = "Element";
             
             Element @element = cast<Element>(getObject(cast<AngelBehaviour>(object.component("AngelBehaviour"))));

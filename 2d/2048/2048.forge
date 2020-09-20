@@ -3,5 +3,8 @@
     "First_Map": "{3d00a85b-4333-43bc-9ab7-54efd51f1b04}",
     "ProjectId": "{a9f4406b-fc88-4905-9cad-e87a8c6ec04d}",
     "Project_Name": "2048",
-    "Project_Version": "1.0"
+    "Project_Version": "1.0",
+    "modules": [
+        "RenderGL"
+    ]
 }

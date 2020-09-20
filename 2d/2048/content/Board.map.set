@@ -1,9 +1,10 @@
 {
-    "crc": -2087000862,
+    "crc": -1704372414,
     "guid": "{3d00a85b-4333-43bc-9ab7-54efd51f1b04}",
     "settings": {
     },
     "subitems": {
     },
-    "type": 51
+    "type": 51,
+    "version": 0
 }
