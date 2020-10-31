@@ -5,6 +5,7 @@
     "Project_Name": "2048",
     "Project_Version": "1.0",
     "modules": [
-        "RenderGL"
+        "RenderGL",
+        "Angel"
     ]
 }

@@ -7,7 +7,7 @@ class Element : Behaviour {
         set {
             realPosition = value;
             if(@transform !is null) {
-                transform.Position = Vector3(realPosition[0], realPosition[1], 0.0f);
+                transform.position = Vector3(realPosition[0], realPosition[1], 0.0f);
             }
         }
     }
@@ -22,13 +22,13 @@ class Element : Behaviour {
         set {
             realValue = value;
             if(@label !is null) {
-                label.Text = "" + pow(2.0f, value);
+                label.text = "" + pow(2.0f, value);
             }
             if(@back !is null) {
-                back.Color = TileColors[value - 1];
+                back.color = TileColors[value - 1];
             }
             if(realValue > 2) {
-                label.Color = Vector4(0.97647f, 0.9647f, 0.949f, 1.0f);
+                label.color = Vector4(0.97647f, 0.9647f, 0.949f, 1.0f);
             }
             scale = 0.80f;
         }
@@ -62,14 +62,14 @@ class Element : Behaviour {
         
         currentPosition = realPosition;
         
-        transform.Scale = Vector3(scale, scale, 1.0f);
-        transform.Position = Vector3(currentPosition[0], currentPosition[1], 0.0f);
+        transform.scale = Vector3(scale, scale, 1.0f);
+        transform.position = Vector3(currentPosition[0], currentPosition[1], 0.0f);
     }
 
     void update() override {
         if(scale < 0.95f) {
             scale += 0.025f;
-            transform.Scale = Vector3(scale, scale, 1.0f);
+            transform.scale = Vector3(scale, scale, 1.0f);
         }
         bool moved = false;
         if(currentPosition[0] < realPosition[0]) {
@@ -89,7 +89,7 @@ class Element : Behaviour {
             moved = true;
         }
         if(moved) {
-            transform.Position = Vector3(currentPosition[0], currentPosition[1], 0.0f);
+            transform.position = Vector3(currentPosition[0], currentPosition[1], 0.0f);
         }
     }
 }

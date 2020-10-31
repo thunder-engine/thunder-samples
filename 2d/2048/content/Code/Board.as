@@ -15,7 +15,7 @@ class Board : Behaviour {
         set {
             realScore = value;
             if(label !is null) {
-                label.Text = "Score: " + realScore;
+                label.text = "Score: " + realScore;
             }
         }
     }
@@ -40,13 +40,13 @@ class Board : Behaviour {
                 SpriteRender @sprite = cast<SpriteRender>(cell.addComponent("SpriteRender"));
 
                 if(sprite !is null) {
-                    sprite.Material = material;
-                    sprite.Texture = texture;
-                    sprite.Color = Vector4(0.5f, 0.5f, 0.5f, 0.5f);
+                    sprite.material = material;
+                    sprite.texture = texture;
+                    sprite.color = Vector4(0.5f, 0.5f, 0.5f, 0.5f);
                 }
 
-                cell.transform().Position = Vector3(x, y, -1.0f);
-                cell.transform().Scale = Vector3(0.8f, 0.8f, 1.0f);
+                cell.transform().position = Vector3(x, y, -1.0f);
+                cell.transform().scale = Vector3(0.8f, 0.8f, 1.0f);
             }
         }
 

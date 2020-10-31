@@ -5,7 +5,7 @@
 		0,
 		"",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -18,8 +18,8 @@
 		1193983187,
 		"Transform",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					0.000000,
@@ -27,7 +27,7 @@
 					0.000000
 				]
 			},
-			"Rotation": {
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -35,7 +35,7 @@
 					0.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					1.000000,
@@ -55,7 +55,7 @@
 		1193983187,
 		"SpriteRender",
 		{
-			"Color": {
+			"color": {
 				"Vector4":
 				[
 					1.000000,
@@ -64,7 +64,7 @@
 					1.000000
 				]
 			},
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -79,7 +79,7 @@
 		1193983187,
 		"Label",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -92,8 +92,8 @@
 		-452310285,
 		"Transform",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					-0.400000,
@@ -101,7 +101,7 @@
 					0.100000
 				]
 			},
-			"Rotation": {
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -109,7 +109,7 @@
 					0.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					0.400000,
@@ -129,15 +129,15 @@
 		-452310285,
 		"TextRender",
 		{
-			"Alignment": 1,
-			"Boundaries": {
+			"alignment": 1,
+			"boundaries": {
 				"Vector2":
 				[
 					2.000000,
 					1.000000
 				]
 			},
-			"Color": {
+			"color": {
 				"Vector4":
 				[
 					0.466667,
@@ -146,11 +146,11 @@
 					1.000000
 				]
 			},
-			"Enabled": true,
-			"Font_Size": 1,
-			"Text": "2048",
-			"Use_Kerning": true,
-			"Word_Wrap": true
+			"enabled": true,
+			"fontSize": 1,
+			"kerning": true,
+			"text": "2048",
+			"wordWrap": true
 		},
 		[
 		],
@@ -165,8 +165,8 @@
 		1193983187,
 		"AngelBehaviour",
 		{
-			"Enabled": true,
-			"Script": "Element"
+			"enabled": true,
+			"script": "Element"
 		},
 		[
 		],
