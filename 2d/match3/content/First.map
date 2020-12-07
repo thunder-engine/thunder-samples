@@ -5,7 +5,7 @@
 		456983289,
 		"Chunk",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -18,8 +18,8 @@
 		311056031,
 		"",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					0.000000,
@@ -27,28 +27,28 @@
 					0.000000
 				]
 			},
-			"Rotation": {
-				"Vector3":
-				[
-					0.000000,
-					0.000000,
-					0.000000
-				]
-			},
-			"Scale": {
-				"Vector3":
-				[
-					1.000000,
-					1.000000,
-					1.000000
-				]
-			},
-			"_Rotation": {
+			"quaternion": {
 				"Quaternion":
 				[
 					0.000000,
 					0.000000,
 					0.000000,
+					1.000000
+				]
+			},
+			"rotation": {
+				"Vector3":
+				[
+					0.000000,
+					0.000000,
+					0.000000
+				]
+			},
+			"scale": {
+				"Vector3":
+				[
+					1.000000,
+					1.000000,
 					1.000000
 				]
 			}
@@ -64,7 +64,7 @@
 		311056031,
 		"Camera",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -77,8 +77,8 @@
 		-465850389,
 		"",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					2.500000,
@@ -86,7 +86,16 @@
 					10.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -94,20 +103,11 @@
 					0.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					1.000000,
 					1.000000,
-					1.000000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.000000,
 					1.000000
 				]
 			}
@@ -123,7 +123,7 @@
 		-465850389,
 		"Camera",
 		{
-			"Background_Color": {
+			"backgroundColor": {
 				"Vector4":
 				[
 					0.000000,
@@ -132,13 +132,13 @@
 					1.000000
 				]
 			},
-			"Enabled": true,
-			"Far": 100.000000,
-			"Focal_Distance": 1.000000,
-			"Fov": 60.000000,
-			"Near": 0.100000,
-			"Orthographic": true,
-			"Size": 12.000000
+			"enabled": true,
+			"far": 100.000000,
+			"focalDistance": 1.000000,
+			"fov": 60.000000,
+			"near": 0.100000,
+			"orthographic": true,
+			"size": 12.000000
 		},
 		[
 		],
@@ -163,7 +163,7 @@
 		311056031,
 		"Background",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -176,8 +176,8 @@
 		185254543,
 		"",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					2.500000,
@@ -185,7 +185,16 @@
 					-10.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -193,20 +202,11 @@
 					0.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					24.000000,
 					12.000000,
-					1.000000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.000000,
 					1.000000
 				]
 			}
@@ -222,7 +222,7 @@
 		185254543,
 		"MeshRender",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -237,7 +237,7 @@
 		311056031,
 		"TextRender",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -250,8 +250,8 @@
 		-156249552,
 		"",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					-0.500000,
@@ -259,7 +259,16 @@
 					0.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -267,21 +276,12 @@
 					0.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					0.020000,
 					0.020000,
 					0.020000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.000000,
-					1.000000
 				]
 			}
 		},
@@ -296,15 +296,15 @@
 		-156249552,
 		"TextRender",
 		{
-			"Alignment": 0,
-			"Boundaries": {
+			"alignment": 0,
+			"boundaries": {
 				"Vector2":
 				[
 					0.000000,
 					0.000000
 				]
 			},
-			"Color": {
+			"color": {
 				"Vector4":
 				[
 					1.000000,
@@ -313,11 +313,11 @@
 					1.000000
 				]
 			},
-			"Enabled": true,
-			"Font_Size": 64,
-			"Text": "0",
-			"Use_Kerning": true,
-			"Word_Wrap": false
+			"enabled": true,
+			"fontSize": 64,
+			"kerning": true,
+			"text": "0",
+			"wordWrap": false
 		},
 		[
 		],
@@ -332,7 +332,7 @@
 		311056031,
 		"Board",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -345,8 +345,8 @@
 		241387472,
 		"",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					0.000000,
@@ -354,28 +354,28 @@
 					0.000000
 				]
 			},
-			"Rotation": {
-				"Vector3":
-				[
-					0.000000,
-					0.000000,
-					0.000000
-				]
-			},
-			"Scale": {
-				"Vector3":
-				[
-					1.000000,
-					1.000000,
-					1.000000
-				]
-			},
-			"_Rotation": {
+			"quaternion": {
 				"Quaternion":
 				[
 					0.000000,
 					0.000000,
 					0.000000,
+					1.000000
+				]
+			},
+			"rotation": {
+				"Vector3":
+				[
+					0.000000,
+					0.000000,
+					0.000000
+				]
+			},
+			"scale": {
+				"Vector3":
+				[
+					1.000000,
+					1.000000,
 					1.000000
 				]
 			}
@@ -391,7 +391,7 @@
 		241387472,
 		"Board",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -404,7 +404,7 @@
 		311056031,
 		"Mount",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -417,8 +417,8 @@
 		-1993958636,
 		"Transform",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					0.000000,
@@ -426,7 +426,16 @@
 					-9.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.382683,
+					0.923880
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -434,21 +443,12 @@
 					45.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					5.000000,
 					5.000000,
 					1.000000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.382683,
-					0.923880
 				]
 			}
 		},
@@ -463,7 +463,7 @@
 		-1993958636,
 		"MeshRender",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -478,7 +478,7 @@
 		311056031,
 		"Mount2",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -491,8 +491,8 @@
 		-2121263758,
 		"Transform",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					-2.985837,
@@ -500,7 +500,16 @@
 					-9.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.382683,
+					0.923880
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -508,21 +517,12 @@
 					45.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					4.000000,
 					4.000000,
 					1.000000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.382683,
-					0.923880
 				]
 			}
 		},
@@ -537,7 +537,7 @@
 		-2121263758,
 		"MeshRender",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -552,7 +552,7 @@
 		311056031,
 		"Mount3",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -565,8 +565,8 @@
 		-424943393,
 		"Transform",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					3.937716,
@@ -574,7 +574,16 @@
 					-9.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.382683,
+					0.923880
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -582,21 +591,12 @@
 					45.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					4.000000,
 					4.000000,
 					1.000000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.382683,
-					0.923880
 				]
 			}
 		},
@@ -611,7 +611,7 @@
 		-424943393,
 		"MeshRender",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -626,7 +626,7 @@
 		311056031,
 		"Mount4",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],
@@ -639,8 +639,8 @@
 		67652357,
 		"Transform",
 		{
-			"Enabled": true,
-			"Position": {
+			"enabled": true,
+			"position": {
 				"Vector3":
 				[
 					7.890561,
@@ -648,7 +648,16 @@
 					-9.000000
 				]
 			},
-			"Rotation": {
+			"quaternion": {
+				"Quaternion":
+				[
+					0.000000,
+					0.000000,
+					0.382683,
+					0.923880
+				]
+			},
+			"rotation": {
 				"Vector3":
 				[
 					0.000000,
@@ -656,21 +665,12 @@
 					45.000000
 				]
 			},
-			"Scale": {
+			"scale": {
 				"Vector3":
 				[
 					4.000000,
 					4.000000,
 					1.000000
-				]
-			},
-			"_Rotation": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.382683,
-					0.923880
 				]
 			}
 		},
@@ -685,7 +685,7 @@
 		67652357,
 		"MeshRender",
 		{
-			"Enabled": true
+			"enabled": true
 		},
 		[
 		],

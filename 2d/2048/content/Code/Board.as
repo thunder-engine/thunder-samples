@@ -29,7 +29,7 @@ class Board : Behaviour {
         Grid.resize(Size, Size);
 
         Material @material = cast<Material>(Engine::loadResource(".embedded/DefaultSprite.mtl"));
-        Texture @texture = cast<Texture>(Engine::loadResource("Sprites/Cell.png"));
+        Sprite @sprite = cast<Sprite>(Engine::loadResource("Sprites/Cell.png"));
 
         for(int x = 0; x < Size; x++) {
             for(int y = 0; y < Size; y++) {
@@ -37,12 +37,12 @@ class Board : Behaviour {
                 cell.Name = "Cell_" + x + "_" + y;
                 cell.Parent = Parent;
 
-                SpriteRender @sprite = cast<SpriteRender>(cell.addComponent("SpriteRender"));
+                SpriteRender @render = cast<SpriteRender>(cell.addComponent("SpriteRender"));
 
-                if(sprite !is null) {
-                    sprite.material = material;
-                    sprite.texture = texture;
-                    sprite.color = Vector4(0.5f, 0.5f, 0.5f, 0.5f);
+                if(render !is null) {
+                    render.material = material;
+                    render.sprite = sprite;
+                    render.color = Vector4(0.5f, 0.5f, 0.5f, 0.5f);
                 }
 
                 cell.transform().position = Vector3(x, y, -1.0f);
