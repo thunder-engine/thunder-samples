@@ -49,13 +49,13 @@ public:
         Transform *t    = actor()->transform();
 
         if(selected) {
-            float euler = t->euler().z + ((direction) ? 90.0f : -90.0f) * Timer::deltaTime();
+            float euler = t->rotation().z + ((direction) ? 90.0f : -90.0f) * Timer::deltaTime();
             if(euler < -20.0f || euler > 20.0f) {
                 direction = !direction;
                 euler = CLAMP(euler, -20.0f, 20.0f);
             }
 
-            t->setEuler(Vector3(0, 0, euler));
+            t->setRotation(Vector3(0, 0, euler));
         }
 
         Vector3 target(column, row, position.z);
@@ -87,7 +87,7 @@ public:
         selected    = value;
         if(!selected) {
             Transform *t    = actor()->transform();
-            t->setEuler(Vector3(0, 0, 0));
+            t->setRotation(Vector3(0, 0, 0));
         }
     }
 };

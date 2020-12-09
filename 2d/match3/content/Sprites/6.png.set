@@ -1,6 +1,6 @@
 {
-    "crc": -1942174770,
     "guid": "{c7db3f3f-7450-470f-b574-aaa98ce60579}",
+    "md5": "{a0fbd222-c47f-9a1f-8d7c-9a4bd52f8b2b}",
     "settings": {
         "Filtering": 1,
         "Format": 2,
@@ -11,5 +11,5 @@
     "subitems": {
     },
     "type": 46,
-    "version": 0
+    "version": 2
 }
