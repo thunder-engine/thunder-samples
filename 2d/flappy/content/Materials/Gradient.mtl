@@ -1,0 +1,101 @@
+{
+    "Blend": 0,
+    "Depth": true,
+    "DepthWrite": true,
+    "Links": [
+        {
+            "IPort": 0,
+            "OPort": 0,
+            "Receiver": 3,
+            "Sender": 2
+        },
+        {
+            "IPort": 1,
+            "OPort": 0,
+            "Receiver": 1,
+            "Sender": 5
+        },
+        {
+            "IPort": 0,
+            "OPort": 0,
+            "Receiver": 1,
+            "Sender": 4
+        },
+        {
+            "IPort": 1,
+            "OPort": 3,
+            "Receiver": 0,
+            "Sender": 1
+        },
+        {
+            "IPort": 2,
+            "OPort": 1,
+            "Receiver": 1,
+            "Sender": 3
+        }
+    ],
+    "Model": 0,
+    "Nodes": [
+        {
+            "Type": "Mix",
+            "Values": {
+            },
+            "X": -192,
+            "Y": 32
+        },
+        {
+            "Type": "TexCoord",
+            "Values": {
+            },
+            "X": -576,
+            "Y": 144
+        },
+        {
+            "Type": "Mask",
+            "Values": {
+                "A": false,
+                "B": false,
+                "G": true,
+                "R": false
+            },
+            "X": -384,
+            "Y": 144
+        },
+        {
+            "Type": "ConstVector3",
+            "Values": {
+                "Value": [
+                    67,
+                    174,
+                    121,
+                    163,
+                    255
+                ]
+            },
+            "X": -576,
+            "Y": -16
+        },
+        {
+            "Type": "ConstVector3",
+            "Values": {
+                "Value": [
+                    67,
+                    86,
+                    77,
+                    144,
+                    255
+                ]
+            },
+            "X": -576,
+            "Y": 64
+        }
+    ],
+    "Raw": "",
+    "Side": true,
+    "Textures": {
+    },
+    "Type": 0,
+    "Uniforms": [
+    ],
+    "View": true
+}

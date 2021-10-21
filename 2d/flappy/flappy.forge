@@ -1,0 +1,12 @@
+{
+    "Company_Name": "ThunderEngine",
+    "First_Map": "{d7c497d3-ccf4-4a66-bbe9-cfba90c76a03}",
+    "ProjectId": "{2a6b2071-79ab-4e2c-a4b8-fdad929dd076}",
+    "Project_Name": "flappy",
+    "Project_Version": "1.0",
+    "modules": [
+        "RenderGL",
+        "Angel",
+        "Bullet"
+    ]
+}
