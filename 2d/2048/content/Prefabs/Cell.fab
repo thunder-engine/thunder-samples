@@ -97,8 +97,8 @@
 				"Vector3":
 				[
 					-0.400000,
-					0.300000,
-					0.100000
+					-0.400000,
+					1.000000
 				]
 			},
 			"rotation": {
@@ -130,11 +130,11 @@
 		"TextRender",
 		{
 			"alignment": 1,
-			"boundaries": {
+			"size": {
 				"Vector2":
 				[
 					2.000000,
-					1.000000
+					2.000000
 				]
 			},
 			"color": {
@@ -150,7 +150,8 @@
 			"fontSize": 1,
 			"kerning": true,
 			"text": "2048",
-			"wordWrap": true
+			"wordWrap": true,
+			"alignment": 34
 		},
 		[
 		],

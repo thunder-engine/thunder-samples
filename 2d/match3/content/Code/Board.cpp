@@ -27,16 +27,16 @@ class Board : public NativeBehaviour {
 
     uint32_t width  = 6;
     uint32_t height = 8;
-    uint8_t types   = 5;
+    uint8_t types = 5;
 
-    bool move       = false;
+    bool move = false;
 
-    Element *selected   = nullptr;
-    Element *target     = nullptr;
+    Element *selected = nullptr;
+    Element *target = nullptr;
 
     TextRender *textRender  = nullptr;
 
-    vector<vector<Element *>>   grid;
+    vector<vector<Element *>> grid;
 
 public:
     void start() {
@@ -51,46 +51,48 @@ public:
             }
         }
 
-        Material *material  = dynamic_cast<Material *>(Engine::loadResource(".embedded/DefaultSprite.mtl"));
-        Texture *texture    = dynamic_cast<Texture *>(Engine::loadResource("Sprites/Cell.png"));
+        Material *material = dynamic_cast<Material *>(Engine::loadResource(".embedded/DefaultSprite.mtl"));
+        Sprite *sprite = dynamic_cast<Sprite *>(Engine::loadResource("Sprites/Cell.png"));
 
-        Actor *parent   = actor();
+        Actor *parent = actor();
         // Fill grid
         for(uint32_t x = 0; x < width; x++) {
             for(uint32_t y = 0; y < height; y++) {
-                bool hole   = false;
+                bool hole = false;
                 int32_t id  = rand() % types;
                 if(!hole) {
-                    Actor *cell = Engine::objectCreate<Actor>("", parent);
-                    SpriteRender *sprite = dynamic_cast<SpriteRender *>(cell->addComponent("SpriteRender"));
-                    if(sprite) {
-                        sprite->setMaterial(material);
-                        sprite->setTexture(texture);
-                    }
-                    cell->transform()->setPosition(Vector3(x, y, -1.0f));
-                    cell->transform()->setScale(Vector3(0.95f, 0.95f, 1.0f));
+                    Actor *cell = Engine::composeActor("SpriteRender", "", parent);
+
+                    SpriteRender *render = static_cast<SpriteRender *>(cell->component("SpriteRender"));
+                    render->setMaterial(material);
+                    render->setSprite(sprite);
+
+                    Transform *transform = static_cast<Transform *>(cell->addComponent("Transform"));
+                    transform->setPosition(Vector3(x, y, -1.0f));
+                    transform->setScale(Vector3(0.95f, 0.95f, 1.0f));
                 }
 
-                Actor *actor = Engine::objectCreate<Actor>("", parent);
-                Element *element = dynamic_cast<Element *>(actor->addComponent("Element"));
+                Actor *actor = Engine::composeActor("Element", "", parent);
 
+                Element *element = static_cast<Element *>(actor->component("Element"));
                 element->column = x;
                 element->row = y;
                 element->id = (hole) ? -1 : id;
 
-                actor->transform()->setPosition(Vector3(x, y, 0.0f));
+                Transform *transform = static_cast<Transform *>(actor->addComponent("Transform"));
+                transform->setPosition(Vector3(x, y, 0.0f));
 
-                grid[x][y]  = element;
+                grid[x][y] = element;
             }
         }
     }
 
     void update() {
-        bool animation  = false;
+        bool animation = false;
         for(uint32_t x = 0; x < width; x++) {
             for(uint32_t y = 0; y < height; y++) {
                 if(grid[x][y] != nullptr && grid[x][y]->animated) {
-                    animation   = true;
+                    animation = true;
                     break;
                 }
             }
@@ -132,7 +134,7 @@ public:
             }
 
             if(move) {
-                move    = false;
+                move = false;
                 if(!findMatches()) {
                     // Swap back
                     if(selected && target) {
@@ -140,12 +142,12 @@ public:
 
                         selected->setSelected(false);
 
-                        selected    = nullptr;
-                        target      = nullptr;
+                        selected = nullptr;
+                        target = nullptr;
                     }
                     return;
                 } else {
-                    move    = true;
+                    move = true;
                 }
                 refillGrid();
             }
@@ -154,9 +156,9 @@ public:
     }
 
     void swapElements(uint8_t x, uint8_t y) {
-        target      = grid[x][y];
-        grid[x][y]  = selected;
-        grid[selected->column][selected->row]   = target;
+        target = grid[x][y];
+        grid[x][y] = selected;
+        grid[selected->column][selected->row] = target;
 
         target->setTarget(selected->column, selected->row);
         selected->setTarget(x, y);
@@ -166,12 +168,12 @@ public:
         Element *result = nullptr;
 
         for(uint32_t y = from; y < height; y++) {
-            Element *element    = grid[x][y];
+            Element *element  = grid[x][y];
             if(element) {
                 if(element->id == -1) {
                     continue;
                 }
-                result  = element;
+                result = element;
                 break;
             }
         }
@@ -186,9 +188,9 @@ public:
             for(uint32_t y = 0; y < height; y++) {
                 if(grid[x][y] == nullptr) {
                     if(y < height - 1) {
-                        Element *element    = findNext(x, y + 1);
+                        Element *element = findNext(x, y + 1);
                         if(element) {
-                            grid[x][y]      = element;
+                            grid[x][y] = element;
                             grid[x][element->row]  = nullptr;
 
                             element->setTarget(x, y);
@@ -196,15 +198,15 @@ public:
                             y = -1;
                         }
                     } else {
-                        Actor *actor    = Engine::objectCreate<Actor>("", parent);
+                        Actor *actor = Engine::composeActor("Element", "", parent);
                         actor->transform()->setPosition(Vector3(x, height + length, 0.0f));
                         length++;
 
-                        Element *element= dynamic_cast<Element *>(actor->addComponent("Element"));
+                        Element *element = dynamic_cast<Element *>(actor->component("Element"));
                         element->setTarget(x, y);
-                        element->id     = rand() % types;
+                        element->id = rand() % types;
 
-                        grid[x][y]      = element;
+                        grid[x][y] = element;
                         y = -1;
                     }
                 }
@@ -248,7 +250,7 @@ public:
                 } else {
                     if(matched < 3) {
                         matched = 1;
-                        from    = i;
+                        from = i;
                         current = id;
                     } else {
                         return true;
@@ -262,20 +264,20 @@ public:
     }
 
     void deleteElements(uint8_t pos, uint8_t from, uint8_t size, bool vertical) {
-        score   += SCORE(size);
+        score += SCORE(size);
         if(textRender) {
             textRender->setText(to_string(score));
         }
         if(selected) {
             selected->setSelected(false);
         }
-        selected    = nullptr;
-        target      = nullptr;
+        selected  = nullptr;
+        target  = nullptr;
 
         for(uint32_t i = from; i < (from + size); i++) {
             uint8_t x = (vertical) ? pos : i;
             uint8_t y = (vertical) ? i : pos;
-            Element *element    = grid[x][y];
+            Element *element  = grid[x][y];
             if(element) {
                 element->actor()->deleteLater();
                 grid[x][y]  = nullptr;

@@ -1,6 +1,7 @@
 {
     "Blend": 0,
     "Depth": true,
+    "DepthWrite": true,
     "Links": [
         {
             "IPort": 0,
@@ -91,6 +92,8 @@
     ],
     "Raw": "",
     "Side": true,
+    "Textures": {
+    },
     "Type": 0,
     "View": true
 }

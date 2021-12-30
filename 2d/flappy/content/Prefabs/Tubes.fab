@@ -2,7 +2,7 @@
 	[
 		"Actor",
 		-1787165907,
-		2128948584,
+		-775871619,
 		"Pair0",
 		{
 			"enabled": true,
@@ -147,6 +147,12 @@
 			}
 		},
 		[
+			[
+				-2032567755,
+				"1destroyed()",
+				-235557598,
+				"2onReferenceDestroyed()"
+			]
 		],
 		{
 			"BaseMap": "{2e17daec-20bf-45f9-a69f-c43295be2675}",
@@ -304,6 +310,12 @@
 			}
 		},
 		[
+			[
+				-1331077228,
+				"1destroyed()",
+				-235557598,
+				"2onReferenceDestroyed()"
+			]
 		],
 		{
 			"BaseMap": "{2e17daec-20bf-45f9-a69f-c43295be2675}",

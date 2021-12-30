@@ -7,7 +7,7 @@ class Element : Behaviour {
         set {
             realPosition = value;
             if(@transform !is null) {
-                transform.position = Vector3(realPosition[0], realPosition[1], 0.0f);
+                transform.position = Vector3(realPosition.x, realPosition.y, 0.0f);
             }
         }
     }
@@ -63,7 +63,7 @@ class Element : Behaviour {
         currentPosition = realPosition;
         
         transform.scale = Vector3(scale, scale, 1.0f);
-        transform.position = Vector3(currentPosition[0], currentPosition[1], 0.0f);
+        transform.position = Vector3(currentPosition.x, currentPosition.y, 0.0f);
     }
 
     void update() override {
@@ -72,24 +72,24 @@ class Element : Behaviour {
             transform.scale = Vector3(scale, scale, 1.0f);
         }
         bool moved = false;
-        if(currentPosition[0] < realPosition[0]) {
+        if(currentPosition.x < realPosition.x) {
             currentPosition += Vector2(0.5f, 0.0f);
             moved = true;
         }
-        if(currentPosition[0] > realPosition[0]) {
+        if(currentPosition.x > realPosition.x) {
             currentPosition -= Vector2(0.5f, 0.0f);
             moved = true;
         }
-        if(currentPosition[1] < realPosition[1]) {
+        if(currentPosition.y < realPosition.y) {
             currentPosition += Vector2(0.0f, 0.5f);
             moved = true;
         }
-        if(currentPosition[1] > realPosition[1]) {
+        if(currentPosition.y > realPosition.y) {
             currentPosition -= Vector2(0.0f, 0.5f);
             moved = true;
         }
         if(moved) {
-            transform.position = Vector3(currentPosition[0], currentPosition[1], 0.0f);
+            transform.position = Vector3(currentPosition.x, currentPosition.y, 0.0f);
         }
     }
 }

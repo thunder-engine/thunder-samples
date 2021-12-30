@@ -5,11 +5,11 @@
         "Filtering": 1,
         "Format": 2,
         "MIP_maping": true,
-        "Type": 0,
+        "Type": 2,
         "Wrap": 1
     },
     "subitems": {
     },
     "type": 46,
-    "version": 2
+    "version": 3
 }

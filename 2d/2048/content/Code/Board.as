@@ -33,11 +33,8 @@ class Board : Behaviour {
 
         for(int x = 0; x < Size; x++) {
             for(int y = 0; y < Size; y++) {
-                Actor @cell = Actor();
-                cell.Name = "Cell_" + x + "_" + y;
-                cell.Parent = Parent;
-
-                SpriteRender @render = cast<SpriteRender>(cell.addComponent("SpriteRender"));
+                Actor @cell = Engine::composeActor("SpriteRender", "Cell_" + x + "_" + y, Parent);
+                SpriteRender @render = cast<SpriteRender>(cell.component("SpriteRender"));
 
                 if(render !is null) {
                     render.material = material;
@@ -80,8 +77,8 @@ class Board : Behaviour {
             tX[pos] = pos;
             tY[pos] = pos;
         }
-        if(dir[0] > 0) tX.reverse();
-        if(dir[1] > 0) tY.reverse();
+        if(dir.x > 0) tX.reverse();
+        if(dir.y > 0) tY.reverse();
         
         for(int c = 0; c < Size; c++) {
             for(int r = 0; r < Size; r++) {
@@ -94,17 +91,17 @@ class Board : Behaviour {
                     do {
                         previous = cell;
                         cell = cell + dir;
-                    } while((cell[0] >= 0 && cell[0] < Size && cell[1] >= 0 && cell[1] < Size) && @Grid[int(cell[0]), int(cell[1])] is null);
+                    } while((cell.x >= 0 && cell.x < Size && cell.y >= 0 && cell.y < Size) && @Grid[int(cell.x), int(cell.y)] is null);
 
-                    Element @next = getElement(int(cell[0]), int(cell[1]));
+                    Element @next = getElement(int(cell.x), int(cell.y));
                     if(next !is null && element.value == next.value) {
                         next.value += 1;
                         Score += int(pow(2.0f, next.value));
                         element.actor().deleteLater();
                         @Grid[x, y] = null;
                     } else {
-                        int pX = int(previous[0]);
-                        int pY = int(previous[1]);
+                        int pX = int(previous.x);
+                        int pY = int(previous.y);
                         @Grid[x, y] = null;
                         @Grid[pX, pY] = @element;
                         
@@ -139,13 +136,15 @@ class Board : Behaviour {
             int x = freeCol[pos];
             int y = freeRow[pos];
             
-            Actor @object = cast<Actor>(ElementPrefab.Actor.clone(Parent));
-            object.Name = "Element";
+            Actor @object = cast<Actor>(ElementPrefab.actor.clone(Parent));
+            if(object !is null) {
+                object.Name = "Element";
             
-            Element @element = cast<Element>(getObject(cast<AngelBehaviour>(object.component("AngelBehaviour"))));
-            if(element !is null) {
-                element.position = Vector2(x, y);
-                @Grid[x, y] = @element;
+                Element @element = cast<Element>(getObject(cast<AngelBehaviour>(object.component("AngelBehaviour"))));
+                if(element !is null) {
+                    element.position = Vector2(x, y);
+                    @Grid[x, y] = @element;
+                }
             }
         } else {
             // No free tiles

@@ -1,57 +1,10 @@
 [
 	[
-		"Actor",
-		-1131072845,
-		1356953464,
 		"Chunk",
-		{
-			"enabled": true
-		},
-		[
-		],
-		{
-		}
-	],
-	[
-		"Transform",
-		-994325635,
 		-1131072845,
-		"Transform",
+		1198341229,
+		"Board",
 		{
-			"enabled": true,
-			"position": {
-				"Vector3":
-				[
-					0.000000,
-					0.000000,
-					0.000000
-				]
-			},
-			"quaternion": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.000000,
-					1.000000
-				]
-			},
-			"rotation": {
-				"Vector3":
-				[
-					0.000000,
-					0.000000,
-					0.000000
-				]
-			},
-			"scale": {
-				"Vector3":
-				[
-					1.000000,
-					1.000000,
-					1.000000
-				]
-			}
 		},
 		[
 		],
@@ -64,11 +17,14 @@
 		-1131072845,
 		"AngelBehaviour",
 		{
-			"enabled": true
+			"enabled": true,
+			"name": "AngelBehaviour",
+			"static": false
 		},
 		[
 		],
 		{
+			"Flags": 3
 		}
 	],
 	[
@@ -129,7 +85,8 @@
 		[
 		],
 		{
-			"ElementPrefab": "{94e53999-5fbb-4274-8d66-760ff77c3fe5}"
+			"ElementPrefab": "{94e53999-5fbb-4274-8d66-760ff77c3fe5}",
+			"Size": 4
 		}
 	],
 	[
@@ -138,11 +95,14 @@
 		-1515142275,
 		"Score",
 		{
-			"enabled": true
+			"enabled": true,
+			"name": "Score",
+			"static": false
 		},
 		[
 		],
 		{
+			"Flags": 3
 		}
 	],
 	[
@@ -197,14 +157,7 @@
 		-1724516578,
 		"TextRender",
 		{
-			"alignment": 0,
-			"boundaries": {
-				"Vector2":
-				[
-					0.000000,
-					0.000000
-				]
-			},
+			"alignment": 17,
 			"color": {
 				"Vector4":
 				[
@@ -217,8 +170,15 @@
 			"enabled": true,
 			"fontSize": 1,
 			"kerning": true,
+			"size": {
+				"Vector2":
+				[
+					0.000000,
+					0.000000
+				]
+			},
 			"text": "Score: 0",
-			"wordWrap": false
+			"wordWrap": true
 		},
 		[
 		],
@@ -233,11 +193,14 @@
 		-1131072845,
 		"Camera",
 		{
-			"enabled": true
+			"enabled": true,
+			"name": "Camera",
+			"static": false
 		},
 		[
 		],
 		{
+			"Flags": 3
 		}
 	],
 	[
@@ -307,6 +270,7 @@
 			"fov": 45.000000,
 			"near": 0.100000,
 			"orthographic": true,
+			"ratio": 2.029610,
 			"size": 8.000000
 		},
 		[

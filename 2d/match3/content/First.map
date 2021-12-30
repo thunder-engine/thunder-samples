@@ -1,57 +1,12 @@
 [
 	[
-		"Actor",
+		"Chunk",
 		311056031,
-		456983289,
+		2121849162,
 		"Chunk",
 		{
-			"enabled": true
-		},
-		[
-		],
-		{
-		}
-	],
-	[
-		"Transform",
-		-1501759770,
-		311056031,
-		"",
-		{
 			"enabled": true,
-			"position": {
-				"Vector3":
-				[
-					0.000000,
-					0.000000,
-					0.000000
-				]
-			},
-			"quaternion": {
-				"Quaternion":
-				[
-					0.000000,
-					0.000000,
-					0.000000,
-					1.000000
-				]
-			},
-			"rotation": {
-				"Vector3":
-				[
-					0.000000,
-					0.000000,
-					0.000000
-				]
-			},
-			"scale": {
-				"Vector3":
-				[
-					1.000000,
-					1.000000,
-					1.000000
-				]
-			}
+			"static": false
 		},
 		[
 		],
@@ -64,7 +19,8 @@
 		311056031,
 		"Camera",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -138,6 +94,7 @@
 			"fov": 60.000000,
 			"near": 0.100000,
 			"orthographic": true,
+			"ratio": 0.623088,
 			"size": 12.000000
 		},
 		[
@@ -163,7 +120,8 @@
 		311056031,
 		"Background",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -237,7 +195,8 @@
 		311056031,
 		"TextRender",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -296,14 +255,7 @@
 		-156249552,
 		"TextRender",
 		{
-			"alignment": 0,
-			"boundaries": {
-				"Vector2":
-				[
-					0.000000,
-					0.000000
-				]
-			},
+			"alignment": 17,
 			"color": {
 				"Vector4":
 				[
@@ -316,6 +268,13 @@
 			"enabled": true,
 			"fontSize": 64,
 			"kerning": true,
+			"size": {
+				"Vector2":
+				[
+					0.000000,
+					0.000000
+				]
+			},
 			"text": "0",
 			"wordWrap": false
 		},
@@ -332,7 +291,8 @@
 		311056031,
 		"Board",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -404,7 +364,8 @@
 		311056031,
 		"Mount",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -478,7 +439,8 @@
 		311056031,
 		"Mount2",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -552,7 +514,8 @@
 		311056031,
 		"Mount3",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
@@ -626,7 +589,8 @@
 		311056031,
 		"Mount4",
 		{
-			"enabled": true
+			"enabled": true,
+			"static": false
 		},
 		[
 		],
