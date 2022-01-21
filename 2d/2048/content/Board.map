@@ -2,7 +2,7 @@
 	[
 		"Chunk",
 		-1131072845,
-		1198341229,
+		-1382347317,
 		"Board",
 		{
 		},
@@ -18,7 +18,6 @@
 		"AngelBehaviour",
 		{
 			"enabled": true,
-			"name": "AngelBehaviour",
 			"static": false
 		},
 		[
@@ -85,8 +84,6 @@
 		[
 		],
 		{
-			"ElementPrefab": "{94e53999-5fbb-4274-8d66-760ff77c3fe5}",
-			"Size": 4
 		}
 	],
 	[
@@ -96,7 +93,6 @@
 		"Score",
 		{
 			"enabled": true,
-			"name": "Score",
 			"static": false
 		},
 		[
@@ -183,7 +179,7 @@
 		[
 		],
 		{
-			"Font": "{79233eea-95d9-405a-a99a-8b005c3879d7}",
+			"Font": "{00000000-0601-0000-0000-000000000000}",
 			"Material": "{00000000-0403-0000-0000-000000000000}"
 		}
 	],
@@ -194,7 +190,6 @@
 		"Camera",
 		{
 			"enabled": true,
-			"name": "Camera",
 			"static": false
 		},
 		[

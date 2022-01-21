@@ -1,10 +1,11 @@
 {
-    "Company_Name": "ThunderEngine",
+    "Company_Name": "Evgeniy Prikazchikov",
     "First_Map": "{3614596a-e212-4252-b824-bee26c5cb519}",
-    "ProjectId": "{2a6b2071-79ab-4e2c-a4b8-fdad929dd076}",
-    "Project_Name": "flappy",
+    "ProjectId": "{87db36d4-940f-49f3-90bf-94f9c00e374c}",
+    "Project_Name": "Flappy",
     "Project_Version": "1.0",
     "modules": [
-        "RenderGL"
+    ],
+    "platforms": [
     ]
 }

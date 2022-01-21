@@ -95,5 +95,7 @@
     "Textures": {
     },
     "Type": 0,
+    "Uniforms": [
+    ],
     "View": true
 }

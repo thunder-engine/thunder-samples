@@ -28,14 +28,20 @@ class GameController : Behaviour {
         if(panel !is null) {
             panel.enabled = false;
         }
+
         @chunk = Engine::loadSceneChunk("Level.map", true);
+        log("-------------------------------------");
+        log("3_SIGNAL=" + _SIGNAL("entered()") + "_SLOT=" + _SLOT("onBirdCollide()"));
         // Find bird
-        Actor @birdActor = cast<Actor>(chunk.find("Bird"));
-        if(birdActor !is null) {
-            @bird = cast<RigidBody>(birdActor.component("RigidBody"));
-            if(bird !is null) {
-                connect(bird, _SIGNAL("entered()"), this, _SLOT("onBirdCollide()"));
-                GameState::gameOver = false;
+        if(chunk !is null) {
+            Actor @birdActor = cast<Actor>(chunk.find("Bird"));
+            if(birdActor !is null) {
+                @bird = cast<RigidBody>(birdActor.component("RigidBody"));
+                if(bird !is null) {
+                    
+                    connect(bird, _SIGNAL("entered()"), this, _SLOT("onBirdCollide()"));
+                    GameState::gameOver = false;
+                }
             }
         }
     }

@@ -25,6 +25,8 @@ public:
     bool direction  = false;
 
     float factor    = 0.0f;
+    
+    
 
     Vector3 position;
 
