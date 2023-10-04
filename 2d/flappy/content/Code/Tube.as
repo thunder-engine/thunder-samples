@@ -22,8 +22,8 @@ class Tube : Behaviour {
             Transform @t = actor().transform();
             if(t !is null) {
                 Vector3 position = t.position + Vector3(-1.0f, 0.0f, 0.0f) * Timer::deltaTime();
-    
-                if(position[0] < -10.0f) {
+                
+                if(position.x < -10.0f) {
                     position = Vector3(10.0f, 0.0f, 0.0);
                     changeGate();
                 }

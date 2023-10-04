@@ -10,35 +10,35 @@ class GameController : Behaviour {
     
     RigidBody @bird = null;
     
-    private Chunk @chunk = null;
+    private Scene @scene = null;
+    
+    private Vector3 impulse(0.0f, 5.0f, 0.0f);
+    private Vector3 point(0.0f, 0.0f, 0.0f);
 
     void start() override {
         connect(startBtn, _SIGNAL("clicked()"), this, _SLOT("onStartClicked()"));
-        
+
         GameState::gameOver = false;
     }
 
     void update() override {
-        if(!GameState::gameOver && Input::isMouseButtonDown(Input::MouseButton::LEFT) && (bird !is null)) {
-            bird.applyImpulse(Vector3(0.0f, 5.0f, 0.0f), Vector3(0.0f, 0.0f, 0.0f));
+        if(!GameState::gameOver && Input::isMouseButtonDown(Input::KeyCode::MOUSE_LEFT) && (bird !is null)) {
+            bird.applyImpulse(impulse, point);
         }
     }
-      
+
     private void onStartClicked() {
         if(panel !is null) {
             panel.enabled = false;
         }
 
-        @chunk = Engine::loadSceneChunk("Level.map", true);
-        log("-------------------------------------");
-        log("3_SIGNAL=" + _SIGNAL("entered()") + "_SLOT=" + _SLOT("onBirdCollide()"));
+        @scene = Engine::loadScene("Level.map", true);
         // Find bird
-        if(chunk !is null) {
-            Actor @birdActor = cast<Actor>(chunk.find("Bird"));
+        if(scene !is null) {
+            Actor @birdActor = cast<Actor>(scene.find("Bird"));
             if(birdActor !is null) {
                 @bird = cast<RigidBody>(birdActor.component("RigidBody"));
                 if(bird !is null) {
-                    
                     connect(bird, _SIGNAL("entered()"), this, _SLOT("onBirdCollide()"));
                     GameState::gameOver = false;
                 }
@@ -52,6 +52,6 @@ class GameController : Behaviour {
         if(panel !is null) {
             panel.enabled = true;
         }
-        Engine::unloadSceneChunk(chunk);
+        Engine::unloadScene(scene);
     }
 };

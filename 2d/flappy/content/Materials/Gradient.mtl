@@ -1,101 +1,132 @@
-{
-    "Blend": 0,
-    "Depth": true,
-    "DepthWrite": true,
-    "Links": [
-        {
-            "IPort": 0,
-            "OPort": 0,
-            "Receiver": 3,
-            "Sender": 2
-        },
-        {
-            "IPort": 1,
-            "OPort": 0,
-            "Receiver": 1,
-            "Sender": 5
-        },
-        {
-            "IPort": 0,
-            "OPort": 0,
-            "Receiver": 1,
-            "Sender": 4
-        },
-        {
-            "IPort": 1,
-            "OPort": 3,
-            "Receiver": 0,
-            "Sender": 1
-        },
-        {
-            "IPort": 2,
-            "OPort": 1,
-            "Receiver": 1,
-            "Sender": 3
-        }
-    ],
-    "Model": 0,
-    "Nodes": [
-        {
-            "Type": "Mix",
-            "Values": {
-            },
-            "X": -192,
-            "Y": 32
-        },
-        {
-            "Type": "TexCoord",
-            "Values": {
-            },
-            "X": -576,
-            "Y": 144
-        },
-        {
-            "Type": "Mask",
-            "Values": {
-                "A": false,
-                "B": false,
-                "G": true,
-                "R": false
-            },
-            "X": -384,
-            "Y": 144
-        },
-        {
-            "Type": "ConstVector3",
-            "Values": {
-                "Value": [
-                    67,
-                    174,
-                    121,
-                    163,
-                    255
-                ]
-            },
-            "X": -576,
-            "Y": -16
-        },
-        {
-            "Type": "ConstVector3",
-            "Values": {
-                "Value": [
-                    67,
-                    86,
-                    77,
-                    144,
-                    255
-                ]
-            },
-            "X": -576,
-            "Y": 64
-        }
-    ],
-    "Raw": "",
-    "Side": true,
-    "Textures": {
-    },
-    "Type": 0,
-    "Uniforms": [
-    ],
-    "View": true
-}
+<Graph>
+    <Value Name="Blend" Type="2">0</Value>
+    <Value Name="Depth" Type="1">true</Value>
+    <Value Name="DepthWrite" Type="1">true</Value>
+    <Value Name="Links" Type="9">
+        <Value Type="8">
+            <Value Name="IPort" Type="2">1</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">0</Value>
+            <Value Name="Sender" Type="2">1</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">3</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">1</Value>
+            <Value Name="Sender" Type="2">3</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">2</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">1</Value>
+            <Value Name="Sender" Type="2">5</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">1</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">1</Value>
+            <Value Name="Sender" Type="2">4</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">1</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">0</Value>
+            <Value Name="Sender" Type="2">1</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">1</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">3</Value>
+            <Value Name="Sender" Type="2">2</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">3</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">1</Value>
+            <Value Name="Sender" Type="2">3</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">1</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">3</Value>
+            <Value Name="Sender" Type="2">2</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">1</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">1</Value>
+            <Value Name="Sender" Type="2">4</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="IPort" Type="2">2</Value>
+            <Value Name="OPort" Type="2">0</Value>
+            <Value Name="Receiver" Type="2">1</Value>
+            <Value Name="Sender" Type="2">5</Value>
+        </Value>
+    </Value>
+    <Value Name="Model" Type="2">0</Value>
+    <Value Name="Nodes" Type="9">
+        <Value Type="8">
+            <Value Name="Index" Type="2">1</Value>
+            <Value Name="Type" Type="10"><![CDATA[Mix]]></Value>
+            <Value Name="Values" Type="8"/>
+            <Value Name="X" Type="2">-249</Value>
+            <Value Name="Y" Type="2">21</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="Index" Type="2">2</Value>
+            <Value Name="Type" Type="10"><![CDATA[TexCoord]]></Value>
+            <Value Name="Values" Type="8">
+                <Value Name="Index" Type="2">0</Value>
+            </Value>
+            <Value Name="X" Type="2">-649</Value>
+            <Value Name="Y" Type="2">130</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="Index" Type="2">3</Value>
+            <Value Name="Type" Type="10"><![CDATA[Mask]]></Value>
+            <Value Name="Values" Type="8">
+                <Value Name="A" Type="1">false</Value>
+                <Value Name="B" Type="1">false</Value>
+                <Value Name="G" Type="1">true</Value>
+                <Value Name="R" Type="1">false</Value>
+            </Value>
+            <Value Name="X" Type="2">-449</Value>
+            <Value Name="Y" Type="2">125</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="Index" Type="2">4</Value>
+            <Value Name="Type" Type="10"><![CDATA[ConstVector3]]></Value>
+            <Value Name="Values" Type="8">
+                <Value Name="Value" Type="9">
+                    <Value Type="10">Vector3</Value>
+                    <Value Type="38">0.6800000071525574</Value>
+                    <Value Type="38">0.4699999988079071</Value>
+                    <Value Type="38">0.6399999856948853</Value>
+                </Value>
+            </Value>
+            <Value Name="X" Type="2">-649</Value>
+            <Value Name="Y" Type="2">-52</Value>
+        </Value>
+        <Value Type="8">
+            <Value Name="Index" Type="2">5</Value>
+            <Value Name="Type" Type="10"><![CDATA[ConstVector3]]></Value>
+            <Value Name="Values" Type="8">
+                <Value Name="Value" Type="9">
+                    <Value Type="10">Vector3</Value>
+                    <Value Type="38">0.25999999046325684</Value>
+                    <Value Type="38">0.33000001311302185</Value>
+                    <Value Type="38">0.5600000023841858</Value>
+                </Value>
+            </Value>
+            <Value Name="X" Type="2">-649</Value>
+            <Value Name="Y" Type="2">47</Value>
+        </Value>
+    </Value>
+    <Value Name="Side" Type="1">false</Value>
+    <Value Name="Textures" Type="8"/>
+    <Value Name="Type" Type="2">0</Value>
+    <Value Name="Uniforms" Type="9"/>
+    <Value Name="View" Type="1">true</Value>
+    <Value Name="Wireframe" Type="1">false</Value>
+</Graph>
